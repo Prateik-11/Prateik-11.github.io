@@ -1,0 +1,339 @@
+:root {
+    --bg: rgba(209,207,187,255);
+    --box-bg-color: #ffffff3d;
+    --text-color: #000000;
+    --cloud-height: 75vh;
+    /* --link-color: rgb(2, 2, 174); */
+    --link-color: rgb(179, 61, 48);
+    --selection-color: rgb(208, 77, 63); 
+    --indent: 3.0em;
+}
+  
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--bg);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('/assets/foreground.png'), url('/assets/background.png'), url('/assets/base-color.png'); 
+    animation: slideBackground 300s linear infinite; 
+    background-repeat: no-repeat, repeat-x, repeat;
+    background-position: bottom , bottom, top;
+    background-size: cover, auto var(--cloud-height), cover;
+    background-attachment: fixed;
+}
+
+@keyframes slideBackground {
+    0% {
+        background-position: left bottom, 0 100%, top;
+    }
+    100% {
+        /*   works on mobile ^_^   */
+        background-position: left bottom, calc(var(--cloud-height) * (2160/512)) 100%, top;
+    }
+}
+
+::selection {
+    color: white;
+    background: var(--selection-color);
+}
+
+.container {
+    width: 80%;
+    max-width: 1200px;
+    background-color: #11111100;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h1, h2, h3 {
+    text-align: center;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.left-column {
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+.right-column {
+    flex: 0 0 28%;
+    max-width: 28%;
+}
+
+.title-block {
+    background-color: var(--box-bg-color);
+    border: 2px dotted var(--text-color);
+    height: fit-content;
+    margin: 10px 0;
+    padding: 20px;
+    overflow: hidden;
+    display: flex;
+    gap: 20px; 
+    /* background-color: red; */
+}
+
+.block {
+    background-color: var(--box-bg-color);
+    border: 2px dotted var(--text-color);
+    /* height: fit-content; */
+    margin: 10px 0;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.block h2 {
+    margin-top: 0;
+}
+
+.block img{
+    width: 10%
+}
+
+a {
+    color: var(--link-color) ;
+    text-decoration:underline;
+}
+
+ul li a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+}
+
+ul li a img {
+    margin-right: 8px; 
+}
+
+.news-list li {
+    position: relative;
+    padding-left: calc(var(--indent) + 3.0em); 
+    text-indent: calc(var(--indent) * -1); 
+}
+
+.news-list li i {
+    display: inline-block;
+    /* width: var(--indent); */
+    font-style: italic;
+}
+
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #000;
+    border-top: 2px solid var(--text-color);
+}
+
+.square {
+    /* use for ascii art */
+    
+    /* background-color: red; */
+    /* white-space: pre-wrap;
+    float: left;
+    height:fit-content;
+    width:fit-content;
+    overflow: hidden;
+    margin-right: -15px; 
+    font-size: 2.8px;
+    line-height: 2.8px; 
+    letter-spacing: unset; */
+
+    
+    width: 35%;
+    height: fit-content;
+    overflow: hidden; 
+    display: flex;
+    align-items: center;
+    /* justify-content: center; */
+    /* background-color: red; */
+}
+
+.square img {
+    /* width: 300px;
+    height: 300px; */
+    /* width: 380px;
+    height: 350px; */
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    margin: 10% 0px 10% 0px;
+}
+
+.intro {
+    width: 65%;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+.whitespace {
+    height: 25vh
+}
+
+.mobile-whitespace {
+    height: 0
+}
+
+.vhs-overlay {
+    position: relative;
+    display: inline-block; 
+    aspect-ratio: 16 / 9;
+}
+
+.vhs-overlay img {
+    display: block; 
+    width: 100%; 
+    height: 100%; 
+}
+
+.vhs-overlay::before {
+    content: "";
+    position: absolute;
+    opacity: .2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    background-image: url(/assets/overlay.png);
+    background-repeat: repeat; 
+    background-position: 0 0;
+    animation-name: Static;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+    box-shadow: inset 0 0 10em rgb(0 0 0/40%);
+}
+
+.vhs-overlay::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1000;
+    background-image: url(/assets/overlay2.png);
+    background-repeat: repeat; 
+    background-position: 0 0;
+    animation-name: Static;
+    animation-duration: .8s;
+    animation-iteration-count: infinite;
+    animation-timing-function: steps(4);
+}
+
+
+
+@keyframes Static {
+    0% {
+        background-position: 0 0
+    }
+
+    100% {
+        background-position: 0 4px
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(.95);
+        box-shadow: 0 0 0 0 rgba(93,255,138,.7)
+    }
+
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px transparent
+    }
+
+    100% {
+        transform: scale(.95);
+        box-shadow: 0 0 0 0 transparent
+    }
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #6f7f7f00;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #dc5242;
+} 
+
+@media screen and (max-width: 1250px) {
+    .title-block {
+        flex-direction: column;
+    }
+
+    .square {
+        width: 50%;
+    }
+    .intro {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    .square {
+        width: 0%;
+    }
+
+    .vhs-overlay {
+        width: 0%;
+    }
+
+    .left-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .whitespace {
+        height: 0
+    }
+
+    .right-column {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .mobile-whitespace {
+        height: 25vh
+    }
+}
+
+@media screen and (max-width: 440px) {
+
+    /* ascii art gets messed up below 440px, this fixes it down to 320 */
+    .square {
+        font-size: 1.9px;
+        line-height: 2.5px; 
+    }
+}
+  
