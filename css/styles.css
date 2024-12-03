@@ -8,7 +8,11 @@
     --selection-color: rgb(208, 77, 63); 
     --indent: 3.0em;
 }
-  
+
+html {
+    font-size: 80%;
+}
+
 body {
     font-family: 'Courier New', Courier, monospace;
     background-color: var(--bg);
@@ -44,10 +48,10 @@ body {
 
 .container {
     width: 80%;
-    max-width: 1200px;
+    max-width: 960px;
     background-color: #11111100;
-    padding: 20px;
-    margin: 20px 0;
+    padding: 16px;
+    margin: 16px 0;
 }
 
 h1, h2, h3 {
@@ -73,22 +77,22 @@ h1, h2, h3 {
 
 .title-block {
     background-color: var(--box-bg-color);
-    border: 2px dotted var(--text-color);
+    border: 1.6px dotted var(--text-color);
     height: fit-content;
-    margin: 10px 0;
-    padding: 20px;
+    margin: 8px 0;
+    padding: 16px;
     overflow: hidden;
     display: flex;
-    gap: 20px; 
+    gap: 16px; 
     /* background-color: red; */
 }
 
 .block {
     background-color: var(--box-bg-color);
-    border: 2px dotted var(--text-color);
+    border: 1.6px dotted var(--text-color);
     /* height: fit-content; */
-    margin: 10px 0;
-    padding: 20px;
+    margin: 8px 0;
+    padding: 16px;
     overflow: hidden;
 }
 
@@ -108,11 +112,11 @@ a {
 ul li a {
     display: flex;
     align-items: center;
-    margin-bottom: 4px;
+    margin-bottom: 3.2px;
 }
 
 ul li a img {
-    margin-right: 8px; 
+    margin-right: 6.4px; 
 }
 
 .news-list li {
