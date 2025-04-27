@@ -7,6 +7,7 @@
     --link-color: rgb(179, 61, 48);
     --selection-color: rgb(208, 77, 63); 
     --indent: 3.0em;
+    --fontFamily: 'Courier New', Courier, monospace;
 }
 
 html {
@@ -14,7 +15,7 @@ html {
 }
 
 body {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: var(--fontFamily);
     background-color: var(--bg);
     color: var(--text-color);
     margin: 0;
@@ -339,5 +340,11 @@ img {
         font-size: 1.9px;
         line-height: 2.5px; 
     }
+}
+
+.section-title p {
+    /* Adjust font size or other styles here */
+    font-size: 1.2em; /* Example: Increase font size */
+    margin-bottom: 0; /* Adjust spacing if needed */
 }
   
