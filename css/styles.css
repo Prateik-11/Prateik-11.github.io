@@ -122,14 +122,17 @@ ul li a img {
 
 .news-list li {
     position: relative;
-    padding-left: calc(var(--indent) + 3.0em); 
-    text-indent: calc(var(--indent) * -1); 
+    padding-left: 6em;
+    text-indent: -6em;
 }
 
-.news-list li i {
-    display: inline-block;
-    /* width: var(--indent); */
+.news-date {
+    display: inline;
     font-style: italic;
+}
+
+.news-sep {
+    margin-right: 0.6em;
 }
 
 .footer {
