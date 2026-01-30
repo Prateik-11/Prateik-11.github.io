@@ -1,3 +1,11 @@
+@font-face {
+    font-family: 'Commit Mono';
+    src: url('/fonts/CommitMono%20VariableFont.woff2') format('woff2');
+    font-weight: 200 700;
+    font-style: normal;
+    font-display: swap;
+}
+
 :root {
     --bg: rgba(209,207,187,255);
     --box-bg-color: #ffffff4b;
@@ -7,15 +15,16 @@
     --link-color: rgb(179, 61, 48);
     --selection-color: rgb(208, 77, 63); 
     --indent: 3.0em;
-    --fontFamily: 'Courier New', Courier, monospace;
+    --fontFamily: 'Commit Mono', monospace;
 }
 
 html {
-    font-size: 80%;
+    font-size: 75%;
 }
 
 body {
     font-family: var(--fontFamily);
+    font-weight: 350;
     background-color: var(--bg);
     color: var(--text-color);
     margin: 0;
@@ -348,6 +357,9 @@ img {
 .section-title p {
     /* Adjust font size or other styles here */
     font-size: 1.2em; /* Example: Increase font size */
+    font-weight: 600;
+    letter-spacing: 0.05em;
     margin-bottom: 0; /* Adjust spacing if needed */
+
 }
   
