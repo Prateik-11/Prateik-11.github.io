@@ -9,7 +9,7 @@
 :root {
     --bg: rgba(209,207,187,255);
     --box-bg-color: #ffffff4b;
-    --text-color: #000000;
+    --text-color: hsl(0, 100%, 5%);
     --cloud-height: 75vh;
     /* --link-color: rgb(2, 2, 174); */
     --link-color: rgb(179, 61, 48);
