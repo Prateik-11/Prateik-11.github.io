@@ -87,7 +87,7 @@ h1, h2, h3 {
 
 .title-block {
     background-color: var(--box-bg-color);
-    border: 1.6px dotted var(--text-color);
+    border: 1.65px dotted var(--text-color);
     height: fit-content;
     margin: 8px 0;
     padding: 16px;
@@ -99,7 +99,7 @@ h1, h2, h3 {
 
 .block {
     background-color: var(--box-bg-color);
-    border: 1.6px dotted var(--text-color);
+    border: 1.65px dotted var(--text-color);
     /* height: fit-content; */
     margin: 8px 0;
     padding: 16px;
@@ -110,9 +110,9 @@ h1, h2, h3 {
     margin-top: 0;
 }
 
-.block img{
+/* .block img{
     width: 10%
-}
+} */
 
 a {
     color: var(--link-color) ;
@@ -323,7 +323,8 @@ img {
     }
 
     .vhs-overlay {
-        width: 0%;
+        /* width: 0%; */
+        display: none;
     }
 
     .left-column {
@@ -364,5 +365,39 @@ img {
 }
   
 .highlight {
-    background-color: rgba(245, 205, 168, 0.721);
-  }
+    color: hsl(05, 100%, 15%);
+    /* background-color: rgba(245, 205, 168, 0.721); */
+}
+
+
+.github-icon {
+    height: auto;
+    width: 1.65em;
+    vertical-align: middle;
+}
+.linkedin-icon {
+    height: auto;
+    width: 1.55em;
+    vertical-align: middle;
+}
+.scholar-icon {
+    height: auto;
+    width: 1.65em;
+    vertical-align: middle;
+}
+.twitter-icon {
+    height: auto;
+    width: 1.65em;
+    vertical-align: middle;
+}
+.email-icon {
+    height: auto;
+    width: 1.65em;
+    vertical-align: middle;
+}
+
+.resume-icon {
+    height: auto;
+    width: 1.3em;
+    vertical-align: middle;
+}
